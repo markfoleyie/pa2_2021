@@ -7,7 +7,7 @@ Mark Foley, January 2019.
 
 class MyClass:
     """
-
+    Describe what the class does. This is stored in the docstring for the class
     """
     def __init__(self, param_1, param_n):
         """
@@ -32,10 +32,10 @@ class MyClass:
         """
         Make this respond to 'print' also by just calling self.__str__(). Can also be used to return a 'representation',
         i.e text of the code needed to create the current instance.
-        :return:
+        :return: A 'representation' of the object.
         """
         # return self.__str__()
-        return f"{self.__class__.__name__}(\"{self.param_1}\", {self.param_n})"
+        return f"{self.__class__.__name__}(\"{self._param_1}\", {self._param_n})"
 
     @property
     def param_1(self):
@@ -59,16 +59,32 @@ class MyClass:
 
     @property
     def param_n(self):
+        """
+        Any rules regarding access to the instance value would be set here.
+
+        :return: The instance value _param_n
+        """
         return self._param_n
 
     @param_n.setter
     def param_n(self, val):
+        """
+        Any rules regarding the modification of the instance vale would be set here.
+
+        :param val: An incoming value which will update _param_n
+        :return: None
+
+        """
         self._param_n = val
 
 
     ##Define any other methods from here e.g
     def method1(self):
-        # do stuff
+        """
+        Describe what this method does, what parameters it accepts, if any, and what value(s) it returns if any.
+
+        :return: None in this case.
+        """
         pass
 
 
