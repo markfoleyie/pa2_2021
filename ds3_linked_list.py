@@ -1,15 +1,16 @@
-class Node(object):
-    # Constructor to initilize class variables
+class Node:
+    # Initializer to initilize class variables
     def __init__(self, data=None, next_node=None):
-        self.data = data
+        self._data = data
         self.next_node = next_node
 
     def __str__(self):
-        return f"{self.data}"
+        return f"{self._data}"
 
     # get data
-    def get_data(self):
-        return self.data
+    @property
+    def data(self):
+        return self._data
 
     # get next value
     def get_next(self):
@@ -20,7 +21,7 @@ class Node(object):
         self.next_node = new_next
 
 
-class LinkedList(object):
+class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
@@ -34,7 +35,7 @@ class LinkedList(object):
         new_node.set_next(self.head)
         self.head = new_node
 
-    def size(self):
+    def __len__(self):
         """
         The size method is very simple, it basically counts nodes until it can’t find anymore, and returns how many
         nodes it found. The method starts at the head node, travels down the line of nodes until it reaches the end
@@ -57,7 +58,7 @@ class LinkedList(object):
         current = self.head
         isPresent = False
         while current and isPresent is False:
-            if current.get_data() == nodeData:
+            if current.data == nodeData:
                 isPresent = True
             else:
                 current = current.get_next()
@@ -82,7 +83,7 @@ class LinkedList(object):
         previous = None
         isPresent = False
         while current and isPresent is False:
-            if current.get_data() == nodeData:
+            if current.data == nodeData:
                 isPresent = True
             else:
                 previous = current
@@ -105,6 +106,7 @@ if __name__ == "__main__":
 
     found = ll.search(8)
     print(f"Found: {found}")
-    print(f"Size: {ll.size()}")
+    # print(f"Size: {ll.__len__()}")
+    print(f"Size: {len(ll)}")
     ll.delete(22)
-    print(f"Size: {ll.size()}")
+    print(f"Size: {ll.__len__()}")

@@ -57,7 +57,7 @@ print(f"Merge sort: {unsorted_list} -> {merge_sort(unsorted_list)}")
 
 # Insertion Sort
 # Insertion sort involves finding the right place for a given element in a sorted list.So in beginning we compare the
-# first two elements and sort them by comparing them.Then we pick the third element and find its proper position among
+# first two elements and sort them by comparing them. Then we pick the third element and find its proper position among
 # the previous two sorted elements.This way we gradually go on adding more elements to the already sorted list by putting
 # them in their proper position.
 def insertion_sort(InputList):
@@ -80,9 +80,9 @@ print(f"{list}")
 
 
 # Shell Sort
-# Shell Sort involves sorting elements which are away from ech other.We sort a large sublist of a given list and go  on
-# reducing the size of the list until all elements are sorted.The   below program finds the gap by equating it to half
-# of the length of the list size and then starts sorting all elements in it.Then we keep resetting the gap until the
+# Shell Sort involves sorting elements which are away from each other. We sort a large sublist of a given list and go on
+# reducing the size of the list until all elements are sorted. The below program finds the gap by equating it to half
+# of the length of the list size and then starts sorting all elements in it. Then we keep resetting the gap until the
 # entire list is sorted.
 
 def shell_sort(input_list):
@@ -112,9 +112,9 @@ print(f"{list}")
 
 
 # Selection Sort
-# In selection sort we start by finding the minimum value in a given list and move it to a sorted list.Then we repeat
-# the process for each of the remaining elements in the unsorted list.The next element entering the sorted list is
-# compared with the existing elements and placed at its correct position.So at the end all the elements from the
+# In selection sort we start by finding the minimum value in a given list and move it to a sorted list. Then we repeat
+# the process for each of the remaining elements in the unsorted list. The next element entering the sorted list is
+# compared with the existing elements and placed at its correct position. So at the end all the elements from the
 # unsorted list are sorted.
 def selection_sort(input_list):
     for idx in range(len(input_list)):

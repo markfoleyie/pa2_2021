@@ -83,7 +83,7 @@ class Node:
         res = []
         if root:
             res = self.inorder_traversal(root.left)
-            res.append(root.data)
+            res.append(root._data)
             res = res + self.inorder_traversal(root.right)
         return res
 
@@ -92,7 +92,7 @@ class Node:
     def preorder_traversal(self, root):
         res = []
         if root:
-            res.append(root.data)
+            res.append(root._data)
             res = res + self.preorder_traversal(root.left)
             res = res + self.preorder_traversal(root.right)
         return res
@@ -103,7 +103,7 @@ class Node:
         if root:
             res = self.postorder_traversal(root.left)
             res = res + self.postorder_traversal(root.right)
-            res.append(root.data)
+            res.append(root._data)
         return res
 
 
