@@ -106,14 +106,17 @@ class Node:
             res.append(root.data)
         return res
 
-root = Node(27)
-root.insert(14)
-root.insert(35)
-root.insert(10)
-root.insert(19)
-root.insert(31)
-root.insert(42)
-root.PrintTree()
-print(root.inorder_traversal(root))
-print(root.preorder_traversal(root))
-print(root.postorder_traversal(root))
+
+if __name__ == "__main__":
+
+    root = Node(27)
+    root.insert(14)
+    root.insert(35)
+    root.insert(10)
+    root.insert(19)
+    root.insert(31)
+    root.insert(42)
+    root.PrintTree()
+    print(root.inorder_traversal(root))
+    print(root.preorder_traversal(root))
+    print(root.postorder_traversal(root))

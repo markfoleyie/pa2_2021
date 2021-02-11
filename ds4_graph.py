@@ -35,31 +35,33 @@ class Graph:
             self.gdict[vrtx1] = [vrtx2]
 
 
-# Create the dictionary with graph elements
-graph = { "a" : ["b","c"],
-          "b" : ["a", "d"],
-          "c" : ["a", "d"],
-          "d" : ["e"],
-          "e" : ["d"]
-         }
+if __name__ == "__main__":
 
-# Print the graph
-print(graph)
-# {'c': ['a', 'd'], 'a': ['b', 'c'], 'e': ['d'], 'd': ['e'], 'b': ['a', 'd']}
+    # Create the dictionary with graph elements
+    graph = { "a" : ["b","c"],
+              "b" : ["a", "d"],
+              "c" : ["a", "d"],
+              "d" : ["e"],
+              "e" : ["d"]
+             }
 
-g = Graph(graph)
+    # Print the graph
+    print(graph)
+    # {'c': ['a', 'd'], 'a': ['b', 'c'], 'e': ['d'], 'd': ['e'], 'b': ['a', 'd']}
 
-print(g.getVertices())
-# ['d', 'b', 'e', 'c', 'a']
+    g = Graph(graph)
 
-print(g.edges())
-# [{'b', 'a'}, {'b', 'd'}, {'e', 'd'}, {'a', 'c'}, {'c', 'd'}]
+    print(g.getVertices())
+    # ['d', 'b', 'e', 'c', 'a']
 
-g.addVertex("f")
-print(g.getVertices())
-# ['f', 'e', 'b', 'a', 'c','d']
+    print(g.edges())
+    # [{'b', 'a'}, {'b', 'd'}, {'e', 'd'}, {'a', 'c'}, {'c', 'd'}]
 
-g.AddEdge({'a','e'})
-g.AddEdge({'a','c'})
-print(g.edges())
-# [{'e', 'd'}, {'b', 'a'}, {'b', 'd'}, {'a', 'c'}, {'a', 'e'}, {'c', 'd'}]
+    g.addVertex("f")
+    print(g.getVertices())
+    # ['f', 'e', 'b', 'a', 'c','d']
+
+    g.AddEdge({'a','e'})
+    g.AddEdge({'a','c'})
+    print(g.edges())
+    # [{'e', 'd'}, {'b', 'a'}, {'b', 'd'}, {'a', 'c'}, {'a', 'e'}, {'c', 'd'}]

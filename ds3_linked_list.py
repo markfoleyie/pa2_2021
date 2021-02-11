@@ -94,16 +94,17 @@ class LinkedList(object):
         else:
             previous.set_next(current.get_next())
                 
-                
-nodes = (1,22,4,67,8,99,23,4,)
+if __name__ == "__main__":
 
-ll = LinkedList()
+    nodes = (1,22,4,67,8,99,23,4,)
 
-for n in nodes:
-    ll.insert(n)
+    ll = LinkedList()
 
-found = ll.search(8)
-print(f"Found: {found}")
-print(f"Size: {ll.size()}")
-ll.delete(22)
-print(f"Size: {ll.size()}")
+    for n in nodes:
+        ll.insert(n)
+
+    found = ll.search(8)
+    print(f"Found: {found}")
+    print(f"Size: {ll.size()}")
+    ll.delete(22)
+    print(f"Size: {ll.size()}")
