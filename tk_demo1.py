@@ -10,21 +10,21 @@ Tkinter generic tasks
 """
 __author__ = 'mark'
 
-from tkinter import *
+import tkinter as tk
 
 # Contain top level window usually called root
-root = Tk()
+root = tk.Tk()
 
 # Basic workflow:
 # 1. Create a GUI object and associate it with its parent
 # 2. Pack it or place it on grid - set up a 'geometry manager'
 
-my_container_1 = Frame(root)
+my_container_1 = tk.Frame(root)
 my_container_1.pack()
 
 # Create a button object and place it in a container.
 # Note that widgets have attributes.
-my_button = Button(my_container_1)
+my_button = tk.Button(my_container_1)
 my_button["text"] = "Hello World!"
 my_button["background"] = "green"
 my_button.pack()

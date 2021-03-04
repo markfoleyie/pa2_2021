@@ -12,6 +12,7 @@ __author__ = 'mark'
 
 from tkinter import *
 
+
 class MyGUI:
     """
     Class that defines the GUI. This approach helps partition GUI-related elements
@@ -47,9 +48,14 @@ class MyGUI:
         self.lablel1.pack()
 
     def print_random(self, evt):
-        print("random stuff")
+        print_some_stuff("random stuff")
 
-def main():
+
+def print_some_stuff(stuff):
+    print(f"This just prints:\n{stuff}")
+
+
+def main_gui():
     # Contain top level window usually called root
     root = Tk()
     # Create an instance of the class that defines the GUI and associate it with the top level window..
@@ -57,5 +63,11 @@ def main():
     # Keep listening for events until destroy event occurs.
     root.mainloop()
 
+
+def main_no_gui():
+    pass
+
+
 if __name__ == "__main__":
-    main()
+    main_gui()
+    # main_no_gui()
